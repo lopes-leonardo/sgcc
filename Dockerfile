@@ -9,10 +9,10 @@ RUN apt-get install nano -y
 
 RUN pip3 install numpy sklearn scipy cython
 
-RUN pip install pyg-lib torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.11.0+cu113>
+RUN pip install pyg-lib torch-scatter torch-sparse torch-cluster torch-spline-conv torch-geometric -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
 
 RUN mkdir /workspaces
 
-COPY ./* /workspaces/sgcc
+COPY . /workspaces/sgcc
 
 WORKDIR /workspaces/sgcc
